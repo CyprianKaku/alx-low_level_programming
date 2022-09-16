@@ -1,3 +1,11 @@
-int _putchar(char c);
-int is_digit(int c);
+#ifndef MAIN_H
+#define MAIN_H
+/**
+ * main - header file for prototypes
+ * void prototypes (void)
+ * int prototypes (int)
+ */
+int _isupper(int);
+int _isdigit(int);
 
+#endif /* MAIN_H*/
