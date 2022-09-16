@@ -5,17 +5,27 @@
  *
  * Return: 0-9, excluding 2 and 4, followed by new line
  */
-void print_most_numbers(void)
+#include <unistd.h>
+
+/**
+ *  * _putchar - writes the character c to stdout
+ *   * @c: The character to print
+ *    *
+ *     * Return: On success 1.
+ *      * On error, -1 is returned, and errno is set appropriately.
+ *       */
+
+void main(void)
 {
 	int i;
 
-	for (i = 0; i <= 9; i++)
+	for (i = 48; i <= 57; i++)
 	{
-		if ((i == 2) || (i == 4))
+		if ((i == 50) || (i == 52))
 			continue;
 		else
 			_putchar(i);
 	}
-	_putchar('\n');
+	_putchar('10');
 }
 
