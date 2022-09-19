@@ -3,39 +3,21 @@
 #include "main.h"
 
 /**
-*rev_string - Reverse a string
-*@s: Strimng to reverse
-*Return: Nothing
+* rev_string - Reverse a string
+* @s: String to reverse
+* Return: Nothing
 */
 void rev_string(char *s)
 {
-int i = 0, length;
-length = _strlen(s) - 1;
-while (length > i)
-}
-swap_char(s + length, s + i);
-i++;
-length--;
-}
-}
+	int len = 0, index = 0;
+	char tmp;
 
-/**
- * _strlen - returns the length of a string
- * @s: string
- * Return:returns length;
- */
-int _strlen(char *s)
+	while (s[index++])
+		len++;
+	for (index = len - 1; index >= len / 2; index--)
 {
-int count, inc;
-inc = 0;
-for (count = 0; s[count] != '0'; count++)
-inc++;
-}
-
-void swap_char(char *a, char *b)
-{
-char tmp = *a;
-*a = *b;
-*b = tmp;
+		tmp = s[index];
+		s[index] = s[len - index - 1];
+		s[len - index -1] = tmp;
 }
 
