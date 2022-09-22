@@ -1,24 +1,28 @@
 #include "main.h"
 
 /**
- * leet - function to change letters to words
- * @str : char variable
- * Return : Always 0
+ * leet - encodes a string into 1337
+ *
+ * @s: string to encode
+ *
+ * Return :ddress of s
+ *
  */
-char *leet(char *str)
+char *leet(char *s)
 {
-	int a, b;
-	char *alpha = "aeotlAEOTL";
-	char *integer = "4307143071";
+	int i, j;
 
-	for (a = 0; str[a] != '\0'; a++)
+	char a[] = "aAeEoOtTlL";
+
+	char b[] = "4433007711";
+
+	for (i = 0; *(s + i); i++)
 	{
-		for (b = 0; alpha[b] != '\0'; b++)
+		for (j = 0; j <= 9; j++)
 		{
-			if (str[a] == alpha[b])
-				str[a] = integer[b];
+			if (a[j] == *(s + i))
+				*(s + i) = b[j];
 		}
 	}
-	return (str);
+	return (s);
 }
-
