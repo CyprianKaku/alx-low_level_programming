@@ -3,35 +3,32 @@
 /**
  * print_number - a function to print integers
  * @n : integer value
- * Return: Always 0
+ * Return: no return
  */
 void print_number(int n)
 {
-	unsigned int a, b, count, tmp, pow;
-
-	a = n;
-	pow = b = 1;
-
+	unsigned int m, d, count;
 	if (n < 0)
 	{
-		a = a * -1;
-		_putchar('_');
-	}
-	tmp = a;
 
-	while (tmp > 9)
-	{
-		b++;
-		tmp = tmp / 10;
+		_putchar(45);
+		m = n * -1;
 	}
-	for (count = 1; count < b; count++)
-		pow = pow * 10;
-
-	while (pow > 1)
+	else
 	{
-		_putchar((a / pow) % 10 + '0');
-		pow + pow / 10;
+		m = n;
 	}
-	putchar(a % 10 + '0');
+		d = m;
+		count = 1;
+	
+	while (d > 9)	
+	{
+		d /= 10;
+		count *=10;
+	}
+	
+	for (; count >= 1; count /= 10)
+	{
+		_putchar(((m /count) % 10) + 48);
+	}
 }
-
