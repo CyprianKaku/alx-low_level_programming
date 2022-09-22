@@ -1,5 +1,7 @@
 #ifdef MAIN_H
 #define MAIN_H
+#ifndef TEST_H_INCLUDED
+#define TEST_H_INCLUDED
 
 char *_strcat(char *dest, char *src);
 char *_strncat(char *dest, char *src, int n);
