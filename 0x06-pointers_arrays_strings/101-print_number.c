@@ -22,7 +22,7 @@ void print_number(int n)
 	while (tmp > 9)
 	{
 		b++;
-		tmp = tmp /10;
+		tmp = tmp / 10;
 	}
 	for (count = 1; count < b; count++)
 		pow = pow * 10;
